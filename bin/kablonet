@@ -1,0 +1,264 @@
+#!/usr/bin/env node
+'use strict';
+const program = require('commander');
+const Configstore = require('configstore');
+const pkg = require('../package.json');
+const conf = new Configstore(pkg.name);
+const inquirer = require('inquirer');
+const Kablonet = require('../');
+const kablonet = new Kablonet();
+const crypto = require('crypto');
+const ora = require('ora');
+var Table = require('cli-table2');
+
+/**
+ * Initialize musterino and password
+ * @param force{Bool} Force the initialization
+ */
+async function init(force) {
+  const musterino = conf.get('musterino');
+  const sifre = conf.get('sifre');
+
+  if (musterino && sifre && !force) {
+    return {musterino:musterino,sifre:sifre}
+  }
+
+  const questions = [
+    {
+      type: 'input',
+      name: 'musterino',
+      message: 'Müşteri Numarasını girin',
+      validate: function(value) {
+        const pass = value.match(/^\d{1,8}$/);  
+        if (pass) {
+          return true;
+        }
+        return 'Müşteri numarası yanlış';
+      }
+    },
+    {
+      type: 'password',
+      name: 'sifre',
+      message: 'Şifreniz'
+  }]
+
+  const answers = await inquirer.prompt(questions)
+    conf.set('musterino',answers.musterino)
+    const sifreHash = crypto.createHash('md5').update(answers.sifre).digest('hex');
+    conf.set('sifre',sifreHash)
+    return {musterino:answers.musterino,sifre:sifreHash}
+}
+
+function printHizmetler(source) {
+  const table = new Table();
+  table.push(
+    [{colSpan:4,content:'Hizmet Sonucu',hAlign:'center'}],
+    [  'Hizmet Durumu','Hizmet No','Hizmet Türü','Tarife Tipi']
+  )
+
+  for (const hizmet of source.sonucMevcutHizmetler) {
+    table.push(
+      [  hizmet.hizmetDurum,hizmet.hizmetNo,hizmet.hizmetTuru,hizmet.tarifeTipi]
+    )
+  }
+  console.log(table.toString());
+}
+
+function printKampanyalar(source) {
+  const table = new Table();
+  table.push(
+    [{colSpan:4,content:'Kampanya Sonucu',hAlign:'center'}],
+    [  'Kampanya Adı','Taahhüt Başlangıç','Taahhüt Bitiş','Taahhüt Bedeli']
+  )
+
+  for (const kampanya of source.sonucKampanyaBilgileri) {
+    table.push(
+      [  kampanya.kampanyaAdi,kampanya.taahhutBaslangicTarihi,kampanya.taahhutBitisTarihi,kampanya.taahhutBedeli]
+    )
+  }
+  console.log(table.toString());
+}
+function printKotaDetayi(source) {
+ 
+
+  for (const donem of source.sonucMusteriKotaHizmetID[0].sonucMusteriKotaDonem) {
+    const header = new Table();
+
+    // Over All
+    header.push(
+      [{colSpan:3,content:'Aylık Kota Sonucu',hAlign:'center'}],
+      [ 'Dönem', 'Toplam Download','Toplam Upload'],
+      [ donem.donem,donem.downloadKullanim,donem.uploadKullanim],
+    )
+    console.log(header.toString());
+    
+    const table = new Table();
+    table.push(
+      [{colSpan:3,content:'Günlük Kota Sonucu',hAlign:'center'}],
+      [ 'Tarih', 'Download','Upload']
+    )
+
+  for (const day of donem.sonucKotaGunlukKullanim) {
+    table.push(
+      [ day.tarih,day.DownloadGB,day.UploadGB],
+    )
+
+  }
+  console.log(table.toString());
+  }
+}
+
+function printLoginInfo(source) {
+  const table = new Table();
+  table.push(
+    [{colSpan:2,content:'Giriş Sonucu',hAlign:'center'}],
+    [ 'Müşteri Adı', source.sonucAuthMusteriBilgi[0].musteriAd ],  
+    [ 'Müşteri Numarası', source.sonucMusteriAuth[0].MusteriID ],  
+    [ 'Son Giriş', source.sonucAuthMusteriBilgi[0].sonGirisTarihi ]
+  );
+  console.log(table.toString());
+}
+
+async function initKablonet(force) {
+  const spinner = ora('Giriş yapılıyor..')
+  try {
+    const logininfo = await init(force);
+    spinner.start();
+    const result = await kablonet.loginWithMusteriNo(logininfo.musterino,logininfo.sifre);
+    spinner.succeed('Giriş başarılı!');
+    printLoginInfo(result);
+    return result;
+  } catch (err) {
+    spinner.fail('Giriş hatası: ' + err);
+    throw err;
+  }
+}
+
+(async function () {
+ 
+  program
+  .version('1.0.0')
+  .description('Kablonet Komut Ara Birimi')
+  .command('login').alias('l').description('Giriş yap')
+  .action(async function () {
+    try {
+      const logininfo = await initKablonet(true);
+      console.log('Kullanıcı ismi ve şifre kaydedildi!')
+  } catch(err) {
+      console.log('Giriş Hatası: ' + err);
+    }
+  })
+
+  program
+  .command('kota').alias('k').description('Kalan Kota')
+  .action(async function () {
+  const spinner = ora('Kota Sorgulanıyor...')
+
+    try {
+      spinner.start();
+      const logininfo = await initKablonet();
+      const kota = await kablonet.getKota();
+      spinner.succeed('Kota sorgusu başarılı!');
+
+      const table = new Table();
+      table.push(
+        [{colSpan:2,content:'Kota Sonucu',hAlign:'center'}],
+        ['Kalan Yüzde', kota.sonucKota[0].Yuzde],
+        ['Kalan Kota', kota.sonucKota[0].Kota]
+      );
+  
+      console.log(table.toString());
+
+    } catch(err) {
+      spinner.fail('Kota Hatası: ' + err);
+      console.log('Kota Hatası: ' + err);
+    }
+  })
+
+  program
+  .command('kotadonem').alias('kd').description('Detaylı Kota')
+  .action(async function () {
+    const spinner = ora('Detaylı Kota Sorgulanıyor...')
+
+    try {
+      spinner.start();
+      const logininfo = await initKablonet();
+      const kotaDonem = await kablonet.getKotaDonem();
+      spinner.succeed('Detaylı Kota sorgusu başarılı!');
+      printKotaDetayi(kotaDonem);
+
+    } catch(err) {
+      spinner.fail('Kota Dönem Hatası: ' + err);
+      console.log('Kota Dönem Hatası: ' + err);
+    }
+
+  })
+
+  program
+  .command('borc').alias('b').description('Borç')
+  .action(async function () {
+    const spinner = ora('Borç Sorgulanıyor...')
+
+    try {
+      spinner.start();
+      const logininfo = await initKablonet();
+      const borc = await kablonet.getBorc();
+      spinner.succeed('Borç sorgusu başarılı!');
+      const table = new Table();
+      table.push(
+        [{colSpan:2,content:'Borç Sonucu',hAlign:'center'}],
+        ['Hizmet No', borc.sonucAnlikBorc[0].hizmetNo],
+        ['Anlık Borç', borc.sonucAnlikBorc[0].anlikBorc]
+      );
+  
+      console.log(table.toString());
+
+    } catch(err) {
+      spinner.fail('Kota Donem Hatası: ' + err);
+      console.log('Kota Donem Hatası: ' + err);
+    }
+
+  })
+
+  program
+  .command('hizmet').alias('hi').description('Hizmetler')
+  .action(async function () {
+    const spinner = ora('Hizmetler Sorgulanıyor...')
+
+    try {
+      spinner.start();
+      const logininfo = await initKablonet();
+      const hizmetler = await kablonet.getHizmetler();
+      spinner.succeed('Hizmetler sorgusu başarılı!');
+      printHizmetler(hizmetler);
+    } catch(err) {
+      spinner.fail('Hizmetler Hatası: ' + err);
+      console.log('Hizmetler Hatası: ' + err);
+    }
+
+  })
+
+  program
+  .command('kampanya').alias('ka').description('Kampanyalar')
+  .action(async function () {
+    const spinner = ora('Kampanyalar Sorgulanıyor...')
+
+    try {
+      spinner.start();
+      const logininfo = await initKablonet();
+      const kampanyalar = await kablonet.getKampanyalar();
+      spinner.succeed('Kampanyalar sorgusu başarılı!');
+     printKampanyalar(kampanyalar);
+    } catch(err) {
+      spinner.fail('Kampanyalar Hatası: ' + err);
+      console.log('Kampanyalar Hatası: ' + err);
+    }
+
+  })
+
+
+  program.parse(process.argv)
+
+  if (!program.args.length) program.help();
+
+})();

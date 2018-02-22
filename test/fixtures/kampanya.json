@@ -1,0 +1,35 @@
+{
+	"sonucKampanyaBilgileri": [{
+		"hizmetID": 22222222,
+		"hizmetNo": "1111111111",
+		"kampanyaAdi": "Maksimum Keyifli Kampanya",
+		"taahhutBaslangicTarihi": "24-10-2016",
+		"taahhutBedeli": 665.62,
+		"taahhutBitisTarihi": "14-10-2018"
+	}, {
+		"hizmetID": 33333333,
+		"hizmetNo": "1111111111",
+		"kampanyaAdi": "Maksimum Keyifli Kampanya",
+		"taahhutBaslangicTarihi": "24-10-2016",
+		"taahhutBedeli": 665.62,
+		"taahhutBitisTarihi": "14-10-2018"
+	}, {
+		"hizmetID": 44444444,
+		"hizmetNo": "1111111111",
+		"kampanyaAdi": "Maksimum Keyifli Kampanya",
+		"taahhutBaslangicTarihi": "24-10-2016",
+		"taahhutBedeli": 665.62,
+		"taahhutBitisTarihi": "14-10-2018"
+	}, {
+		"hizmetID": 55555555,
+		"hizmetNo": "1111111111",
+		"kampanyaAdi": "Maksimum Keyifli Kampanya",
+		"taahhutBaslangicTarihi": "24-10-2016",
+		"taahhutBedeli": 36.14,
+		"taahhutBitisTarihi": "14-10-2018"
+	}],
+	"sonucMesaj": [{
+		"sonucAciklama": "Sonuç başarılı",
+		"sonucKod": "0"
+	}]
+}

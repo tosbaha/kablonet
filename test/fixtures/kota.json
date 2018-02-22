@@ -1,0 +1,18 @@
+{
+	"sonucFatura": [{
+		"OdemeYolu": null,
+		"SonOdemeTarihi": null,
+		"Tutar": 0,
+		"sonucAciklama": "Faturalarınızı zamanında ödediğiniz için teşekkür ederiz.",
+		"sonucKod": "ODEME_SUCCESS"
+	}],
+	"sonucKota": [{
+		"Donem": "AKN Kota",
+		"HizmetID": 33333333,
+		"Kota": "30 GB",
+		"KotaBirim": "AKN Kota",
+		"Yuzde": 0,
+		"sonucAciklama": "İşlem Başarılı",
+		"sonucKod": "0"
+	}]
+}

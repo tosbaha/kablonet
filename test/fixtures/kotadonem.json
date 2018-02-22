@@ -1,0 +1,362 @@
+{
+	"sonucMesaj": [{
+		"sonucAciklama": "Sonuç başarılı",
+		"sonucKod": "0"
+	}],
+	"sonucMusteriKotaHizmetID": [{
+		"hizmetID": 33333333,
+		"hizmetNo": "1111111111",
+		"sonucMusteriKotaDonem": [{
+			"donem": "02\/2018",
+			"downloadKullanim": "120.08 GB \/ 150 GB",
+			"sonucKotaGunlukKullanim": [{
+				"DownloadGB": "1.18 GB",
+				"UploadGB": "61.99 MB",
+				"tarih": "22.02.2018"
+			}, {
+				"DownloadGB": "2.6 GB",
+				"UploadGB": "214.54 MB",
+				"tarih": "21.02.2018"
+			}, {
+				"DownloadGB": "2.81 GB",
+				"UploadGB": "430.64 MB",
+				"tarih": "20.02.2018"
+			}, {
+				"DownloadGB": "3.87 GB",
+				"UploadGB": "240.2 MB",
+				"tarih": "19.02.2018"
+			}, {
+				"DownloadGB": "4.76 GB",
+				"UploadGB": "413 MB",
+				"tarih": "18.02.2018"
+			}, {
+				"DownloadGB": "3.53 GB",
+				"UploadGB": "222.41 MB",
+				"tarih": "17.02.2018"
+			}, {
+				"DownloadGB": "6.34 GB",
+				"UploadGB": "229.78 MB",
+				"tarih": "16.02.2018"
+			}, {
+				"DownloadGB": "4.58 GB",
+				"UploadGB": "331.98 MB",
+				"tarih": "15.02.2018"
+			}, {
+				"DownloadGB": "3.7 GB",
+				"UploadGB": "261.26 MB",
+				"tarih": "14.02.2018"
+			}, {
+				"DownloadGB": "3.97 GB",
+				"UploadGB": "274.6 MB",
+				"tarih": "13.02.2018"
+			}, {
+				"DownloadGB": "5.39 GB",
+				"UploadGB": "284.73 MB",
+				"tarih": "12.02.2018"
+			}, {
+				"DownloadGB": "11.29 GB",
+				"UploadGB": "219.86 MB",
+				"tarih": "11.02.2018"
+			}, {
+				"DownloadGB": "6.08 GB",
+				"UploadGB": "853.63 MB",
+				"tarih": "10.02.2018"
+			}, {
+				"DownloadGB": "7.06 GB",
+				"UploadGB": "640.56 MB",
+				"tarih": "09.02.2018"
+			}, {
+				"DownloadGB": "6.9 GB",
+				"UploadGB": "348.41 MB",
+				"tarih": "08.02.2018"
+			}, {
+				"DownloadGB": "3.91 GB",
+				"UploadGB": "322.32 MB",
+				"tarih": "07.02.2018"
+			}, {
+				"DownloadGB": "6.02 GB",
+				"UploadGB": "247.32 MB",
+				"tarih": "06.02.2018"
+			}, {
+				"DownloadGB": "4.37 GB",
+				"UploadGB": "273.38 MB",
+				"tarih": "05.02.2018"
+			}, {
+				"DownloadGB": "9.06 GB",
+				"UploadGB": "708.93 MB",
+				"tarih": "04.02.2018"
+			}, {
+				"DownloadGB": "7.98 GB",
+				"UploadGB": "305.41 MB",
+				"tarih": "03.02.2018"
+			}, {
+				"DownloadGB": "7.06 GB",
+				"UploadGB": "473.63 MB",
+				"tarih": "02.02.2018"
+			}, {
+				"DownloadGB": "7.63 GB",
+				"UploadGB": "345.95 MB",
+				"tarih": "01.02.2018"
+			}],
+			"uploadKullanim": "7.52 GB"
+		}, {
+			"donem": "01\/2018",
+			"downloadKullanim": "179.99 GB \/ 150 GB",
+			"sonucKotaGunlukKullanim": [{
+				"DownloadGB": "8.05 GB",
+				"UploadGB": "493.58 MB",
+				"tarih": "31.01.2018"
+			}, {
+				"DownloadGB": "5.38 GB",
+				"UploadGB": "376.44 MB",
+				"tarih": "30.01.2018"
+			}, {
+				"DownloadGB": "3.92 GB",
+				"UploadGB": "260.66 MB",
+				"tarih": "29.01.2018"
+			}, {
+				"DownloadGB": "13.17 GB",
+				"UploadGB": "511.1 MB",
+				"tarih": "28.01.2018"
+			}, {
+				"DownloadGB": "10.91 GB",
+				"UploadGB": "460.9 MB",
+				"tarih": "27.01.2018"
+			}, {
+				"DownloadGB": "7.29 GB",
+				"UploadGB": "330.47 MB",
+				"tarih": "26.01.2018"
+			}, {
+				"DownloadGB": "5.61 GB",
+				"UploadGB": "154.49 MB",
+				"tarih": "25.01.2018"
+			}, {
+				"DownloadGB": "5.46 GB",
+				"UploadGB": "189.7 MB",
+				"tarih": "24.01.2018"
+			}, {
+				"DownloadGB": "9.84 GB",
+				"UploadGB": "383.9 MB",
+				"tarih": "23.01.2018"
+			}, {
+				"DownloadGB": "2.84 GB",
+				"UploadGB": "131.78 MB",
+				"tarih": "22.01.2018"
+			}, {
+				"DownloadGB": "7.63 GB",
+				"UploadGB": "407.37 MB",
+				"tarih": "21.01.2018"
+			}, {
+				"DownloadGB": "9.92 GB",
+				"UploadGB": "542.48 MB",
+				"tarih": "20.01.2018"
+			}, {
+				"DownloadGB": "7.62 GB",
+				"UploadGB": "204.67 MB",
+				"tarih": "19.01.2018"
+			}, {
+				"DownloadGB": "8.03 GB",
+				"UploadGB": "273.01 MB",
+				"tarih": "18.01.2018"
+			}, {
+				"DownloadGB": "7.39 GB",
+				"UploadGB": "165.35 MB",
+				"tarih": "17.01.2018"
+			}, {
+				"DownloadGB": "9.15 GB",
+				"UploadGB": "272.57 MB",
+				"tarih": "16.01.2018"
+			}, {
+				"DownloadGB": "5.47 GB",
+				"UploadGB": "178.4 MB",
+				"tarih": "15.01.2018"
+			}, {
+				"DownloadGB": "3.44 GB",
+				"UploadGB": "516.61 MB",
+				"tarih": "14.01.2018"
+			}, {
+				"DownloadGB": "3.99 GB",
+				"UploadGB": "352.12 MB",
+				"tarih": "13.01.2018"
+			}, {
+				"DownloadGB": "6.2 GB",
+				"UploadGB": "342.18 MB",
+				"tarih": "12.01.2018"
+			}, {
+				"DownloadGB": "2.27 GB",
+				"UploadGB": "233.05 MB",
+				"tarih": "11.01.2018"
+			}, {
+				"DownloadGB": "3.74 GB",
+				"UploadGB": "290.71 MB",
+				"tarih": "10.01.2018"
+			}, {
+				"DownloadGB": "4.52 GB",
+				"UploadGB": "204.73 MB",
+				"tarih": "09.01.2018"
+			}, {
+				"DownloadGB": "3.4 GB",
+				"UploadGB": "146.73 MB",
+				"tarih": "08.01.2018"
+			}, {
+				"DownloadGB": "3.04 GB",
+				"UploadGB": "160.25 MB",
+				"tarih": "07.01.2018"
+			}, {
+				"DownloadGB": "3.87 GB",
+				"UploadGB": "360.94 MB",
+				"tarih": "06.01.2018"
+			}, {
+				"DownloadGB": "3.4 GB",
+				"UploadGB": "218.2 MB",
+				"tarih": "05.01.2018"
+			}, {
+				"DownloadGB": "2.77 GB",
+				"UploadGB": "161.66 MB",
+				"tarih": "04.01.2018"
+			}, {
+				"DownloadGB": "1.96 GB",
+				"UploadGB": "170.52 MB",
+				"tarih": "03.01.2018"
+			}, {
+				"DownloadGB": "4.31 GB",
+				"UploadGB": "199.95 MB",
+				"tarih": "02.01.2018"
+			}, {
+				"DownloadGB": "5.4 GB",
+				"UploadGB": "227.07 MB",
+				"tarih": "01.01.2018"
+			}],
+			"uploadKullanim": "8.71 GB"
+		}, {
+			"donem": "12\/2017",
+			"downloadKullanim": "137.73 GB \/ 150 GB",
+			"sonucKotaGunlukKullanim": [{
+				"DownloadGB": "2.26 GB",
+				"UploadGB": "193.36 MB",
+				"tarih": "31.12.2017"
+			}, {
+				"DownloadGB": "4.34 GB",
+				"UploadGB": "327.21 MB",
+				"tarih": "30.12.2017"
+			}, {
+				"DownloadGB": "5.55 GB",
+				"UploadGB": "574.95 MB",
+				"tarih": "29.12.2017"
+			}, {
+				"DownloadGB": "4.27 GB",
+				"UploadGB": "290.16 MB",
+				"tarih": "28.12.2017"
+			}, {
+				"DownloadGB": "6.55 GB",
+				"UploadGB": "266.11 MB",
+				"tarih": "27.12.2017"
+			}, {
+				"DownloadGB": "9.7 GB",
+				"UploadGB": "1.16 GB",
+				"tarih": "26.12.2017"
+			}, {
+				"DownloadGB": "4.68 GB",
+				"UploadGB": "202.78 MB",
+				"tarih": "25.12.2017"
+			}, {
+				"DownloadGB": "3.05 GB",
+				"UploadGB": "329.04 MB",
+				"tarih": "24.12.2017"
+			}, {
+				"DownloadGB": "7.54 GB",
+				"UploadGB": "432.4 MB",
+				"tarih": "23.12.2017"
+			}, {
+				"DownloadGB": "2.3 GB",
+				"UploadGB": "384.51 MB",
+				"tarih": "22.12.2017"
+			}, {
+				"DownloadGB": "2.21 GB",
+				"UploadGB": "215.15 MB",
+				"tarih": "21.12.2017"
+			}, {
+				"DownloadGB": "3.02 GB",
+				"UploadGB": "192.89 MB",
+				"tarih": "20.12.2017"
+			}, {
+				"DownloadGB": "4.52 GB",
+				"UploadGB": "200.82 MB",
+				"tarih": "19.12.2017"
+			}, {
+				"DownloadGB": "4.25 GB",
+				"UploadGB": "141.52 MB",
+				"tarih": "18.12.2017"
+			}, {
+				"DownloadGB": "6.11 GB",
+				"UploadGB": "361.6 MB",
+				"tarih": "17.12.2017"
+			}, {
+				"DownloadGB": "8.05 GB",
+				"UploadGB": "488.32 MB",
+				"tarih": "16.12.2017"
+			}, {
+				"DownloadGB": "8.35 GB",
+				"UploadGB": "393.13 MB",
+				"tarih": "15.12.2017"
+			}, {
+				"DownloadGB": "2.34 GB",
+				"UploadGB": "199.86 MB",
+				"tarih": "14.12.2017"
+			}, {
+				"DownloadGB": "1.6 GB",
+				"UploadGB": "149.88 MB",
+				"tarih": "13.12.2017"
+			}, {
+				"DownloadGB": "2.05 GB",
+				"UploadGB": "213.19 MB",
+				"tarih": "12.12.2017"
+			}, {
+				"DownloadGB": "2.02 GB",
+				"UploadGB": "168.81 MB",
+				"tarih": "11.12.2017"
+			}, {
+				"DownloadGB": "2.67 GB",
+				"UploadGB": "171.55 MB",
+				"tarih": "10.12.2017"
+			}, {
+				"DownloadGB": "2.22 GB",
+				"UploadGB": "106.13 MB",
+				"tarih": "09.12.2017"
+			}, {
+				"DownloadGB": "4.49 GB",
+				"UploadGB": "447.91 MB",
+				"tarih": "08.12.2017"
+			}, {
+				"DownloadGB": "1.87 GB",
+				"UploadGB": "182.44 MB",
+				"tarih": "07.12.2017"
+			}, {
+				"DownloadGB": "6.03 GB",
+				"UploadGB": "195.65 MB",
+				"tarih": "06.12.2017"
+			}, {
+				"DownloadGB": "2.58 GB",
+				"UploadGB": "117.4 MB",
+				"tarih": "05.12.2017"
+			}, {
+				"DownloadGB": "2.22 GB",
+				"UploadGB": "203.34 MB",
+				"tarih": "04.12.2017"
+			}, {
+				"DownloadGB": "3.93 GB",
+				"UploadGB": "346.84 MB",
+				"tarih": "03.12.2017"
+			}, {
+				"DownloadGB": "12.78 GB",
+				"UploadGB": "573.34 MB",
+				"tarih": "02.12.2017"
+			}, {
+				"DownloadGB": "4.17 GB",
+				"UploadGB": "177.08 MB",
+				"tarih": "01.12.2017"
+			}],
+			"uploadKullanim": "9.22 GB"
+		}]
+	}]
+}

@@ -1,0 +1,96 @@
+{
+	"sonucMesaj": [{
+		"sonucAciklama": "Sonuç Başarılı",
+		"sonucKod": "0"
+	}],
+	"sonucMevcutHizmetler": [{
+		"HizmetIslemleri": [{
+			"Ad": "KabloTV Ekle",
+			"ID": 14
+		}, {
+			"Ad": "Kablonet Ekle",
+			"ID": 12
+		}],
+		"bagliHizmetID": 0,
+		"guvenliInternetDurum": false,
+		"hizmetDurum": "AÇIK",
+		"hizmetDurumID": 2,
+		"hizmetID": 22222222,
+		"hizmetNo": "1111111111",
+		"hizmetTuru": "ANALOG KABLOTV",
+		"hizmetTuruID": 1,
+		"macAdresi": null,
+		"tarifeTipi": "Bireysel",
+		"tarifeTipiID": 1
+	}, {
+		"HizmetIslemleri": [{
+			"Ad": "Kablonet Tarife Değiştir",
+			"ID": 21
+		}, {
+			"Ad": "Kablonet Paket Ekle",
+			"ID": 22
+		}, {
+			"Ad": "Kablosuz Ağ Adı ve Şifre",
+			"ID": 20
+		}, {
+			"Ad": "Güvenli İnternet Ekle",
+			"ID": 90
+		}],
+		"bagliHizmetID": 22222222,
+		"guvenliInternetDurum": false,
+		"hizmetDurum": "AÇIK",
+		"hizmetDurumID": 2,
+		"hizmetID": 33333333,
+		"hizmetNo": "1111111111",
+		"hizmetTuru": "KABLONET",
+		"hizmetTuruID": 2,
+		"macAdresi": "AABB.CCDD.EEFF",
+		"tarifeTipi": "25 Mbps 150 GB AKNli Ekosınırsız ",
+		"tarifeTipiID": 415
+	}, {
+		"HizmetIslemleri": [{
+			"Ad": "KabloTV Tarife Değiştir",
+			"ID": 41
+		}],
+		"bagliHizmetID": 22222222,
+		"guvenliInternetDurum": false,
+		"hizmetDurum": "AÇIK",
+		"hizmetDurumID": 2,
+		"hizmetID": 44444444,
+		"hizmetNo": "1111111111",
+		"hizmetTuru": "KABLOTV",
+		"hizmetTuruID": 4,
+		"macAdresi": null,
+		"tarifeTipi": "Üst Yayın",
+		"tarifeTipiID": 261
+	}, {
+		"HizmetIslemleri": null,
+		"bagliHizmetID": 22222222,
+		"guvenliInternetDurum": false,
+		"hizmetDurum": "AÇIK",
+		"hizmetDurumID": 2,
+		"hizmetID": 66666666,
+		"hizmetNo": "1111111111",
+		"hizmetTuru": "KABLO WEBTV",
+		"hizmetTuruID": 14,
+		"macAdresi": null,
+		"tarifeTipi": "Giriş + Vizioon Paketi",
+		"tarifeTipiID": 489
+	}, {
+		"HizmetIslemleri": [{
+			"Ad": "KabloTV Paketi Değiştir",
+			"ID": 61
+		}],
+		"bagliHizmetID": 44444444,
+		"guvenliInternetDurum": false,
+		"hizmetDurum": "AÇIK",
+		"hizmetDurumID": 2,
+		"hizmetID": 55555555,
+		"hizmetNo": "1111111111",
+		"hizmetTuru": "KABLOTV PAKET",
+		"hizmetTuruID": 6,
+		"macAdresi": null,
+		"tarifeTipi": "Vizioon Sinema Paketi",
+		"tarifeTipiID": 194
+	}]
+}

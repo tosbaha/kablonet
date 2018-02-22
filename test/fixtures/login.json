@@ -1,0 +1,16 @@
+{
+	"sonucAuthMusteriBilgi": [{
+		"musteriAd": "USERNAME",
+		"musteriSoyad": "SURNAME",
+		"musteriTCKimlik": "12345678910",
+		"sonGirisTarihi": "17:06:23 22.02.2018",
+		"sonucAciklama": "Sonuç başarılı",
+		"sonucKod": "0"
+	}],
+	"sonucMusteriAuth": [{
+		"MusteriID": 1234567,
+		"sonucAciklama": "Sonuç Başarılı",
+		"sonucKey": "b2b9aae1-baee-4981-a078-6434358bfd25",
+		"sonucKod": "0"
+	}]
+}
