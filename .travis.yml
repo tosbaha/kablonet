@@ -1,11 +1,14 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 sudo: false
-
 before_script:
-  - npm install
+- npm install
 script:
-  - npm run test
-  - npm run coverage-html
-  - npm run report-coverage
+- npm run test
+- npm run coverage-html
+- npm run report-coverage
+env:
+  matrix:
+  - secure: e4Rsi6tmzvO7HlnqHPLfeDJBaPj3Q8XJsw2OkF2uPwbBopH4ZHMOPgSXV7eiAr+hxo+uoQKaAOtEOY3nqobzKvvCHZ+1A7U5OPS/Hsv4R8bXyE0zNjcVI9dFxlihrXP5ndRwlyaA5RzW88iJx3ax7/ooTRMfieVMd3cq5T2yyHryptboqhLW/90H5HKPngeGUKxtl4d34ltaLsMjOimu+Hx60k0W4OVmZMJfmSyi82MRdPPk6J7I0NAuparjkqzcIP+vENsYtmzIT9+ynQkfZIGV73DSKMqP9q40emmxkQjDmopdI93i4nsRwYNJ/hILKZ4lMz9GC8JhrjuLTGZjmk/KmDq200+TFZ7h5s8JZRBy21k1OjVJuXejQh1105vUQcvUz4sAGqaX1uH5yh0FomzJC7yw0CmRjKiZ9prEH6Wl8CMThSRdE+5Mk/zdBaJ1K76n3I1gZBRxp0jVUlHLMylCrYtTMP02g0nmxcUPIY0a7K2p825lUvFLX4MLUSERKVPQQwA1/AeWwMq05fwJ52VGMqFc9sy0Uw6oxGCu0KbqlgK1ayTtJ84Sp6fQVVzT17Y10MRcny9ZvisM6xh1eDzqJRQKkwG/6P5Eamk7DMxOgt7Px3q0kwULgbiuQ4S95PVEZv7M07UVs+Qe9V4hGjUvNpaAiDVvFx/f7zvKVog=
+  - secure: Oflhp5Y6WxWGhZb20SwrYWglGjuoV8/v5Zt2rkbF68/P//hB1Ptxw5j5Wi6DkW832kc2ZPGUt+/oFEXaq6Od6I6s32SZspBGMvkjD1pnlv//z4GFZfHZ6jWT3bL/6IbCjaEpfmFO04Y9y32HSeLwmez3uTPuUlIo4MjuRiLED1NJ/aQ+mxvD9ujHo1NP6aBJsF7nYMIeoHIJA7ivXX6F9iUxmuYRjfeSp+Ulb5SpupvaLLun+I8FDYmYhJfp/DbfQpkDptbkX7u/+oZ6Oiz6krE0ZatNVGA6K17vgfI9HNyJpOezpeBPN4YFok/e3x1SwoSejIl9q0BzJ6GaFA4MEzH/xUNiIjz3ne9jgvhtbkaS59jDJC6PlM9Ouj5W5IKmghe5ouHl0B8RAu9IEUMtPC6kPXflm0KwnqEDuKjMF+PL2s8hssEJTFouiWEC7nNsiv2kh6IqPmCE320ONSIY/41N7ASae7+f9r58VoOHUMuQsq4jT4Uvu61k56AGVM7Lt8KEDrj+SEWRhk4Gg+xy2WQyUgQFNlgYCt1hOfCw/XcAGMet63+ffzqQpgFsRlEkn1O5cGMq0n6nF4CRmJyWVj7honmPK15xj/LkvUMeHdZ6NvANjG7FHUAOW+WcVKg1tLhC8B71Z6joP3Rn0GE1T3JHx5Ds1PP2XhO2gUXBWTw=
