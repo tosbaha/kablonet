@@ -23,7 +23,6 @@ describe('Kablonet LIVE API Test',function() {
         await kablonet.loginWithMusteriNo('WRONG','WRONG').should.be.rejectedWith('Kablonet Giris Hatasi.');
     });
 
-
     it('should login',async function() {
         const result = await kablonet.loginWithMusteriNo(musterino,password);
         result.sonucMusteriAuth.should.be.Array();
@@ -68,7 +67,6 @@ describe('Kablonet LIVE API Test',function() {
         result.sonucKampanyaBilgileri[0].taahhutBitisTarihi.should.be.String();
         result.sonucMesaj[0].sonucKod.should.be.eql('0');
     });
-
 
     it('should get detayli koya',async function() {
         const result = await kablonet.getKotaDonem();
