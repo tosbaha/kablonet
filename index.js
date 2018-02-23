@@ -90,7 +90,6 @@ class Kablonet {
     */
     async getBorc() {
         const response = await this.getKablonetService('/KullaniciService.svc/sorgAnlikBorc')
-        //{"sonucAnlikBorc":[{"anlikBorc":"65.38","hizmetNo":"1032429417","sonucAciklama":"Sonuç başarılı","sonucKod":"0"}]}
         return response;
     }
 

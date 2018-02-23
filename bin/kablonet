@@ -3,7 +3,8 @@
 const program = require('commander');
 const Configstore = require('configstore');
 const pkg = require('../package.json');
-const conf = new Configstore(pkg.name);
+const configname = process.env.configname || pkg.name;
+const conf = new Configstore(configname);
 const inquirer = require('inquirer');
 const Kablonet = require('../');
 const kablonet = new Kablonet();
@@ -136,6 +137,10 @@ async function initKablonet(force) {
 
 (async function () {
  
+  //Mock CLI if needed
+  const mockurl = process.env.mockurl || kablonet.baseUrl;
+  kablonet.baseUrl = mockurl;
+
   program
   .version('1.0.0')
   .description('Kablonet Komut Ara Birimi')
@@ -155,8 +160,8 @@ async function initKablonet(force) {
   const spinner = ora('Kota Sorgulanıyor...')
 
     try {
-      spinner.start();
       const logininfo = await initKablonet();
+      spinner.start();
       const kota = await kablonet.getKota();
       spinner.succeed('Kota sorgusu başarılı!');
 
@@ -181,8 +186,8 @@ async function initKablonet(force) {
     const spinner = ora('Detaylı Kota Sorgulanıyor...')
 
     try {
-      spinner.start();
       const logininfo = await initKablonet();
+      spinner.start();
       const kotaDonem = await kablonet.getKotaDonem();
       spinner.succeed('Detaylı Kota sorgusu başarılı!');
       printKotaDetayi(kotaDonem);
@@ -200,8 +205,8 @@ async function initKablonet(force) {
     const spinner = ora('Borç Sorgulanıyor...')
 
     try {
-      spinner.start();
       const logininfo = await initKablonet();
+      spinner.start();
       const borc = await kablonet.getBorc();
       spinner.succeed('Borç sorgusu başarılı!');
       const table = new Table();
@@ -226,8 +231,8 @@ async function initKablonet(force) {
     const spinner = ora('Hizmetler Sorgulanıyor...')
 
     try {
-      spinner.start();
       const logininfo = await initKablonet();
+      spinner.start();
       const hizmetler = await kablonet.getHizmetler();
       spinner.succeed('Hizmetler sorgusu başarılı!');
       printHizmetler(hizmetler);
@@ -244,8 +249,8 @@ async function initKablonet(force) {
     const spinner = ora('Kampanyalar Sorgulanıyor...')
 
     try {
-      spinner.start();
       const logininfo = await initKablonet();
+      spinner.start();
       const kampanyalar = await kablonet.getKampanyalar();
       spinner.succeed('Kampanyalar sorgusu başarılı!');
      printKampanyalar(kampanyalar);

@@ -1,4 +1,3 @@
-
 const should = require('should');
 require('dotenv').config();
 const Kablonet = require('../');

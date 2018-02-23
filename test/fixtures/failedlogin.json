@@ -1,0 +1,16 @@
+{
+	"sonucAuthMusteriBilgi": [{
+		"musteriAd": null,
+		"musteriSoyad": null,
+		"musteriTCKimlik": null,
+		"sonGirisTarihi": null,
+		"sonucAciklama": "Bilgi Bulunamadı",
+		"sonucKod": "10"
+	}],
+	"sonucMusteriAuth": [{
+		"MusteriID": 0,
+		"sonucAciklama": "Girilen değerler yanlıştır veya müşteri bulunamamıştır",
+		"sonucKey": null,
+		"sonucKod": "10"
+	}]
+}
