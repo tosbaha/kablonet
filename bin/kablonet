@@ -10,7 +10,7 @@ const Kablonet = require('../');
 const kablonet = new Kablonet();
 const crypto = require('crypto');
 const ora = require('ora');
-var Table = require('cli-table2');
+var Table = require('cli-table3');
 
 /**
  * Initialize musterino and password

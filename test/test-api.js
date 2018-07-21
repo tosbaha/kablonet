@@ -3,7 +3,7 @@ require('dotenv').config();
 const Kablonet = require('../');
 
 describe('Kablonet LIVE API Test',function() {
-    this.timeout(10000); //Slow API 
+    this.timeout(20000); //Slow API 
     const kablonet = new Kablonet();
     const musterino = process.env.musterino;
     const password = process.env.password;
