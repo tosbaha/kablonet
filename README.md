@@ -1,5 +1,5 @@
 # Kablonet CLI 
-[![Build Status](https://travis-ci.org/tosbaha/kablonet.svg?branch=master)](https://travis-ci.org/tosbaha/kablonet) [![Code coverage status](http://codecov.io/github/tosbaha/kablonet/coverage.svg?branch=master)](http://codecov.io/github/tosbaha/kablonet)
+[![Build Status](https://travis-ci.org/tosbaha/kablonet.svg?branch=master)](https://travis-ci.org/tosbaha/kablonet) [![Code coverage status](http://codecov.io/github/tosbaha/kablonet/coverage.svg?branch=master)](http://codecov.io/github/tosbaha/kablonet) [![dependencies Status](https://david-dm.org/tosbaha/kablonet/status.svg)](https://david-dm.org/tosbaha/kablonet)
 =========
 
 This utility allows you to check Kablonet for different services.
