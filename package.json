@@ -33,6 +33,7 @@
     "commander": "^2.16.0",
     "configstore": "^3.1.2",
     "inquirer": "^6.0.0",
+    "lodash": "^4.17.11",
     "ora": "^3.0.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.2",
