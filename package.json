@@ -29,7 +29,7 @@
   "dependencies": {
     "cli-table3": "^0.5.1",
     "commander": "^2.20.0",
-    "configstore": "^3.1.2",
+    "configstore": "^4.0.0",
     "inquirer": "^6.3.1",
     "lodash": "^4.17.11",
     "ora": "^3.4.0",
@@ -39,8 +39,8 @@
   "devDependencies": {
     "child_process": "^1.0.2",
     "codecov": "^3.5.0",
-    "dotenv": "^6.2.0",
-    "mocha": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "should": "^13.2.3",
     "yakbak": "^3.0.0"
