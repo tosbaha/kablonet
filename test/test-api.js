@@ -19,7 +19,7 @@ describe('Kablonet LIVE API Test',function() {
     });
 
     it('should not login with wrong credentials',async function(){
-        await kablonet.loginWithMusteriNo('WRONG','WRONG').should.be.rejectedWith('Kablonet Giris Hatasi.');
+        await kablonet.loginWithMusteriNo('4346201','WRONG').should.be.rejectedWith('Kablonet Giris Hatasi.');
     });
 
     it('should login',async function() {
