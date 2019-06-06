@@ -7,9 +7,7 @@
     "test": "mocha --recursive test",
     "coverage": "nyc --reporter=text mocha --recursive test",
     "coverage-html": "nyc --reporter=html mocha --recursive test",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
