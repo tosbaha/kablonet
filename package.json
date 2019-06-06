@@ -30,22 +30,21 @@
   },
   "dependencies": {
     "cli-table3": "^0.5.1",
-    "commander": "^2.16.0",
+    "commander": "^2.20.0",
     "configstore": "^3.1.2",
-    "inquirer": "^6.0.0",
+    "inquirer": "^6.3.1",
     "lodash": "^4.17.11",
-    "ora": "^3.0.0",
-    "request": "^2.87.0",
-    "request-promise": "^4.2.2",
-    "snyk": "^1.88.0"
+    "ora": "^3.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {
     "child_process": "^1.0.2",
-    "codecov": "^3.0.4",
-    "dotenv": "^6.0.0",
+    "codecov": "^3.5.0",
+    "dotenv": "^6.2.0",
     "mocha": "^5.2.0",
-    "nyc": "^13.0.0",
-    "should": "^13.2.1",
+    "nyc": "^14.1.1",
+    "should": "^13.2.3",
     "yakbak": "^3.0.0"
   },
   "snyk": true
