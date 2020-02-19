@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "child_process": "^1.0.2",
-    "codecov": "^3.6.1",
+    "codecov": "^3.6.5",
     "dotenv": "^8.2.0",
     "mocha": "^6.2.2",
     "nyc": "^15.0.0",
