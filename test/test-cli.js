@@ -46,7 +46,7 @@ describe('Kablonet CLI Test',function(){
     });
 
     it('should spawn the binary',function(done) {
-        const args = [bin]
+        const args = [bin,'help']
         const proc = spawn(process.execPath, args, {
         })
 

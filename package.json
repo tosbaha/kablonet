@@ -36,7 +36,6 @@
     "request-promise": "^4.2.5"
   },
   "devDependencies": {
-    "child_process": "^1.0.2",
     "codecov": "^3.6.5",
     "dotenv": "^8.2.0",
     "mocha": "^7.1.1",
